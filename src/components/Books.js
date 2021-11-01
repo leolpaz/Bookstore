@@ -1,16 +1,14 @@
 import React from 'react';
+import Form from './AddBook';
+import BookList from './BookList';
 
 const Books = () => (
   <>
-    <div className="books-container" />
-    <h2>ADD NEW BOOK</h2>
-    <form>
-      <input type="text" placeholder="Book title" />
-      <select disabled>
-        <option value="category">Category</option>
-      </select>
-      <button type="button">ADD BOOK</button>
-    </form>
+    <div className="books-page">
+      <BookList />
+      <h2>ADD NEW BOOK</h2>
+      <Form />
+    </div>
   </>
 );
 
