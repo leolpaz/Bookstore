@@ -14,6 +14,9 @@ On this milestone, I created the redux store, the actions for adding or removing
 - Jest
 - Reacting Test Library
 
+## Live Demo
+
+[Bookstore](https://leolpaz-bookstore.netlify.app/)
 
 ## Getting Started
 
