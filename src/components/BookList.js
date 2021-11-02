@@ -1,25 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 
 const List = () => {
-  const books = [
-    {
-      name: 'placeholderOne',
-      category: 'action',
-      author: 'placeholder author',
-      completed: 0,
-      chapter: 1,
-      id: 1,
-    },
-    {
-      name: 'placeholderTwo',
-      category: 'action',
-      author: 'placeholder author',
-      completed: 0,
-      chapter: 1,
-      id: 2,
-    },
-  ];
+  const books = useSelector((state) => state.booksReducer);
+
   return (
     <div className="list-container">
       {books.map((book) => (
@@ -30,6 +15,7 @@ const List = () => {
             author={book.author}
             completed={book.completed}
             chapter={book.chapter}
+            id={book.id}
           />
         </div>
       ))}

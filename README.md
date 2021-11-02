@@ -4,7 +4,7 @@
 
 > On this project I'll build a single-page app with functions to add and remove books, as well as a book list.
 
-On this milestone, I install react, create the components and the folder structure.
+On this milestone, I created the redux store, the actions for adding or removing a book. Connecting them to the UI.
 
 ## Built With
 
@@ -14,6 +14,9 @@ On this milestone, I install react, create the components and the folder structu
 - Jest
 - Reacting Test Library
 
+## Live Demo
+
+[Bookstore](https://leolpaz-bookstore.netlify.app/)
 
 ## Getting Started
 
@@ -21,7 +24,7 @@ On this milestone, I install react, create the components and the folder structu
 To get a local copy up and running follow these simple example steps.
 
 - Clone the repository with git clone https://github.com/leolpaz/Math-Magicians.git;
-- Install dependencies with npm i/yarn i;
+- Install dependencies with npm i/yarn -i;
 - Use npm start/yarn start to create the dev server;
 - Go to http://localhost:3000/ on your browser if it doesn't do so automatically once you create the dev server;
 
