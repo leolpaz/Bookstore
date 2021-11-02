@@ -5,23 +5,23 @@ import { addBook } from '../redux/books/books';
 
 const Form = () => {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState("")
-  const [author, setAuthor] = useState("")
-  
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+
   const titleHandler = (e) => {
-    setTitle((prev) => e.target.value)
-  }
+    setTitle(e.target.value);
+  };
 
   const authorHandler = (e) => {
-    setAuthor((prev) => e.target.value)
-  }
+    setAuthor(e.target.value);
+  };
 
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
       name: title,
       category: 'placeholder category',
-      author: author,
+      author,
       completed: 0,
       chapter: 1,
       id: uuidv4(),
@@ -32,8 +32,8 @@ const Form = () => {
 
   return (
     <form onSubmit={submitBookToStore}>
-      <input type="text" onChange={titleHandler} placeholder="Book title" required/>
-      <input type="text" onChange={authorHandler} placeholder="Author name" required/>
+      <input type="text" onChange={titleHandler} placeholder="Book title" required />
+      <input type="text" onChange={authorHandler} placeholder="Author name" required />
       <select disabled>
         <option value="category">Category</option>
       </select>
