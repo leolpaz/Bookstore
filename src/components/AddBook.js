@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
 const Form = () => {
   const dispatch = useDispatch();
+  const [title, setTitle] = useState("")
+  const [author, setAuthor] = useState("")
+  
+  const titleHandler = (e) => {
+    setTitle((prev) => e.target.value)
+  }
+
+  const authorHandler = (e) => {
+    setAuthor((prev) => e.target.value)
+  }
 
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      name: e.target.title.value,
+      name: title,
       category: 'placeholder category',
-      author: e.target.author.value,
+      author: author,
       completed: 0,
       chapter: 1,
       id: uuidv4(),
@@ -22,8 +32,8 @@ const Form = () => {
 
   return (
     <form onSubmit={submitBookToStore}>
-      <input type="text" name="title" placeholder="Book title" />
-      <input type="text" name="author" placeholder="Author name" />
+      <input type="text" onChange={titleHandler} placeholder="Book title" required/>
+      <input type="text" onChange={authorHandler} placeholder="Author name" required/>
       <select disabled>
         <option value="category">Category</option>
       </select>
