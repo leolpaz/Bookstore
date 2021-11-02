@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from '../redux/configStore';
 
 // components
 
@@ -8,7 +10,7 @@ import Books from './Books';
 import Categories from './Categories';
 
 const App = () => (
-  <>
+  <Provider store={store}>
     <NavBar />
     <Switch>
       <Route exact path="/">
@@ -17,8 +19,9 @@ const App = () => (
       <Route path="/categories">
         <Categories />
       </Route>
+      <Redirect from="*" to="/" />
     </Switch>
-  </>
+  </Provider>
 );
 
 export default App;
