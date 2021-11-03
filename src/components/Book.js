@@ -11,8 +11,22 @@ const Book = (props) => {
 
   const dispatch = useDispatch();
 
+  const removeFromAPI = async (id) => {
+    await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/YM3PSnyKoYXp8BbKCQ5a/books/${id}`, {
+      method: 'DELETE',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        item_id: `${id}`,
+      }),
+    });
+  };
+
   const removeHandler = () => {
     dispatch(removeBook(id));
+    removeFromAPI(id);
   };
 
   return (
