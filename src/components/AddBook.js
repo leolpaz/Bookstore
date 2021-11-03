@@ -16,21 +16,6 @@ const Form = () => {
     setAuthor(e.target.value);
   };
 
-  const bookToAPI = async (book) => {
-    await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/YM3PSnyKoYXp8BbKCQ5a/books', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        title: `${book.name}&&&${book.author}`,
-        category: `${book.category}`,
-        item_id: `${book.id}`,
-      }),
-    });
-  };
-
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
@@ -43,7 +28,6 @@ const Form = () => {
     };
     e.target.reset();
     dispatch(addBook(newBook));
-    bookToAPI(newBook);
   };
 
   return (
