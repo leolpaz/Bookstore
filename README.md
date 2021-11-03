@@ -4,8 +4,7 @@
 
 > On this project I'll build a single-page app with functions to add and remove books, as well as a book list.
 
-On this milestone, I created the redux store, the actions for adding or removing a book. Connecting them to the UI.
-
+On this milestone, I connected the add and remove functions, and the list display to the API
 ## Built With
 
 - JavaScript
