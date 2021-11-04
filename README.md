@@ -6,7 +6,7 @@
 
 ![screenshot](./app_screenshot.png)
 
-On this milestone, I added styling to the page
+On this milestone, I added styling to the page.
 
 
 ## Built With
