@@ -2,9 +2,13 @@
 
 # Bookstore
 
-> On this project I'll build a single-page app with functions to add and remove books, as well as a book list.
+> On this project I'll build a single-page app with functions to add and remove books to the API, as well as a book list
 
-On this milestone, I connected the add and remove functions, and the list display to the API
+![screenshot](./app_screenshot.png)
+
+On this milestone, I added styling to the page
+
+
 ## Built With
 
 - JavaScript
