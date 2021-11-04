@@ -18,14 +18,14 @@ const Book = (props) => {
   return (
     <>
       <div className="book-info">
-          <p className="category">{category}</p>
-          <p className="book-title">{name}</p>
-          <p className="author">{author}</p>
-          <div className="btn-container">
-            <button className="book-btn" type="button">Comments</button>
-            <button className="book-btn" onClick={removeHandler} type="button">Remove</button>
-            <button className="book-btn" type="button">Edit</button>
-          </div>
+        <p className="category">{category}</p>
+        <p className="book-title">{name}</p>
+        <p className="author">{author}</p>
+        <div className="btn-container">
+          <button className="book-btn" type="button">Comments</button>
+          <button className="book-btn" onClick={removeHandler} type="button">Remove</button>
+          <button className="book-btn" type="button">Edit</button>
+        </div>
       </div>
       <div className="completion">
         <AiOutlineLoading3Quarters />
