@@ -32,12 +32,12 @@ const Form = () => {
 
   return (
     <form onSubmit={submitBookToStore}>
-      <input type="text" onChange={titleHandler} placeholder="Book title" required />
-      <input type="text" onChange={authorHandler} placeholder="Author name" required />
-      <select disabled>
+      <input className="form-input" type="text" onChange={titleHandler} placeholder="Book title" required />
+      <input className="form-input" type="text" onChange={authorHandler} placeholder="Author name" required />
+      <select className="cat-select" disabled>
         <option value="category">Category</option>
       </select>
-      <button type="submit">ADD BOOK</button>
+      <button className="submit-btn" type="submit">ADD BOOK</button>
     </form>
   );
 };

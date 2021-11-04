@@ -12,16 +12,18 @@ import Categories from './Categories';
 
 const App = () => (
   <Provider store={store}>
-    <NavBar />
-    <Switch>
-      <Route exact path="/">
-        <Books />
-      </Route>
-      <Route path="/categories">
-        <Categories />
-      </Route>
-      <Redirect from="*" to="/" />
-    </Switch>
+    <div className="page-container">
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <Books />
+        </Route>
+        <Route path="/categories">
+          <Categories />
+        </Route>
+        <Redirect from="*" to="/" />
+      </Switch>
+    </div>
   </Provider>
 );
 
