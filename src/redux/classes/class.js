@@ -1,4 +1,3 @@
-
 const CHANGE_CLASS = '/classes/class/CHANGE_CLASS';
 
 const initialState = [true, false];
@@ -10,7 +9,7 @@ export const changeClass = () => ({
 const classesReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_CLASS:
-      return state.map(el => !el)     
+      return state.map((el) => !el);
     default:
       return state;
   }
