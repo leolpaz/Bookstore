@@ -17,30 +17,30 @@ const Book = (props) => {
 
   return (
     <>
-      <div>
-        <h3>{category}</h3>
-        <h2>{name}</h2>
-        <h3>{author}</h3>
-        <div>
-          <button type="button">Comments</button>
-          <button onClick={removeHandler} type="button">Remove</button>
-          <button type="button">Edit</button>
+      <div className="book-info">
+        <p className="category">{category}</p>
+        <p className="book-title">{name}</p>
+        <p className="author">{author}</p>
+        <div className="btn-container">
+          <button className="book-btn" type="button">Comments</button>
+          <button className="book-btn" onClick={removeHandler} type="button">Remove</button>
+          <button className="book-btn" type="button">Edit</button>
         </div>
       </div>
-      <div>
+      <div className="completion">
         <AiOutlineLoading3Quarters />
-        <div>
-          <p>
+        <div className="comp-info">
+          <p className="comp-nbr">
             {completed}
             %
           </p>
-          <p>completed</p>
+          <p className="comp-txt">completed</p>
         </div>
       </div>
-      <div>
-        <p>CURRENT CHAPTER</p>
-        <p>{chapter}</p>
-        <button type="button">UPDATE PROGRESS</button>
+      <div className="chapter-info">
+        <p className="cur-chapter">CURRENT CHAPTER</p>
+        <p className="chapter">{chapter}</p>
+        <button className="update-btn" type="button">UPDATE PROGRESS</button>
       </div>
     </>
   );
